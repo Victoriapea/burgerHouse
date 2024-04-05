@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
+import Router from './Router';
 
 export default function App() {
   return (
     <div>
-      <h1>Bubble House</h1>
-
+      <Router />
     </div>
   )
 }

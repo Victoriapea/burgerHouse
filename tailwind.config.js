@@ -163,6 +163,9 @@ module.exports = {
       fuchsia: colors.fuchsia,
       pink: colors.pink,
       rose: colors.rose,
+      'primary': '#ffc045',
+      'secondary': '#3d2514',
+      'red-primary': '#bf2222',
     }),
     columns: {
       auto: "auto",
@@ -305,6 +308,7 @@ module.exports = {
       DEFAULT: "1",
     },
     fontFamily: {
+      'secondary': ['"Alfa Slab One"'],
       sans: [
         "ui-sans-serif",
         "system-ui",
