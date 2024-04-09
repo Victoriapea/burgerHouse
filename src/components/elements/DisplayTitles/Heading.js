@@ -1,45 +1,72 @@
-import React from 'react'
+import React from "react";
 
 export default function Heading(props) {
-
   const {
     children,
     variant,
     theme, //style
-    display //color
+    display, //color
+    alignement,
+    className
   } = props;
 
-  const classDefault = "mt-5 uppercase"
-  let font, color
+  const classDefault = "uppercase";
+  let font, color, align
 
-  switch(theme){
-    case "secondary" :
-      font = "font-secondary"
-      break
-    default :
-      font = "tracking-tighter"
+  switch (theme) {
+    case "secondary":
+      font = "font-secondary";
+      break;
+    default:
+      font = "tracking-tighter";
   }
 
-  switch(display){
-    case "gray" :
-      color = "text-gray-600"
-      break
-    default :
-      color = "text-secondary"
+  switch (display) {
+    case "gray":
+      color = "text-gray-600";
+      break;
+    default:
+      color = "text-secondary";
   }
 
+  switch (alignement) {
+    case "center":
+      align = "justify-center";
+      break;
+    case "right":
+      align = "justify-end";
+      break;
+    default:
+      align = "justify-start";
+  }
 
   switch (variant) {
     case "h3":
       return (
-        <div className="flex items-center justify-center my-5">
-          <h3 className={`text-2xl ${classDefault} ${font} ${color}`}>{children}</h3>
+        <div className={`flex ${align}`}>
+          <h3 className={`text-2xl ${classDefault} ${className} ${font} ${color}`}>
+            {children}
+          </h3>
+        </div>
+      );
+    case "h4":
+      return (
+        <div className={`flex ${align}`}>
+          <h3 className={`text-lg ${classDefault} ${className} ${font} ${color}`}>
+            {children}
+          </h3>
         </div>
       );
     default:
       return (
-        <div className="flex items-center justify-center my-5">
-          <h2 className={`${theme === "secondary" ? "text-5xl" : "text-3xl"} ${classDefault} ${font} ${color}`}>{children}</h2>
+        <div className={`flex ${align}`}>
+          <h2
+            className={`${
+              theme === "secondary" ? "text-5xl" : "text-3xl"
+            } ${classDefault} ${className} ${font} ${color}`}
+          >
+            {children}
+          </h2>
         </div>
       );
   }

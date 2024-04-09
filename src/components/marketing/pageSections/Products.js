@@ -14,7 +14,7 @@ export default function Products() {
         Toujours des délicieux burgers
       </HeadingTitles>
 
-      <Heading theme="secondary">
+      <Heading theme="secondary" alignement="center" className="my-5">
         Choisissez et savourez
       </Heading>
       <p className='text-center'>
@@ -29,7 +29,7 @@ export default function Products() {
           </div>
 
           <div className='flex flex-col items-center justify-center px-5 pb-5'>
-            <Heading variant="h3">
+            <Heading variant="h3" className="my-5">
               Lorem ipsum dolor
             </Heading>
             <p className='text-center'>
@@ -47,7 +47,7 @@ export default function Products() {
           </div>
 
           <div className='flex flex-col items-center justify-center px-5 pb-5'>
-            <Heading variant="h3">
+            <Heading variant="h3" className="my-5">
               Lorem ipsum dolor
             </Heading>
             <p className='text-center'>
@@ -65,7 +65,7 @@ export default function Products() {
           </div>
 
           <div className='flex flex-col items-center justify-center px-5 pb-5'>
-            <Heading variant="h3">
+            <Heading variant="h3" className="my-5">
               Lorem ipsum dolor
             </Heading>
             <p className='text-center'>
