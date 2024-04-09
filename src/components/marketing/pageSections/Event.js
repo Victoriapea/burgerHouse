@@ -7,7 +7,7 @@ import Image2 from "../../../medias/images/products/Product-1.jpg";
 import Image3 from "../../../medias/images/products/Product-2.jpg";
 import Heading from "../../elements/DisplayTitles/Heading";
 
-const Slide = ({ children, category, title, image }) => {
+const Slide = ({ children, category, title, image, alt }) => {
   return (
     <div className="grid grid-cols-2 p-6">
       <div className="p-10 mb-10">
@@ -20,7 +20,7 @@ const Slide = ({ children, category, title, image }) => {
       <div className="relative w-full h-full">
         <img
           src={image}
-          alt="Un évènement de foot"
+          alt={alt}
           className="bg-primary absolute top-0 left-0 w-full h-full object-cover object-bottom z-0"
         />
       </div>
@@ -34,6 +34,7 @@ export default function Event() {
       image={Image1}
       category="évènements à venir"
       title="vivez la demi-finale"
+      alt="Supporters"
     >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -44,6 +45,7 @@ export default function Event() {
       image={Image2}
       category="nouveau burger"
       title="découvrez le killer burger"
+      alt="Hamburger"
     >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -54,6 +56,7 @@ export default function Event() {
       image={Image3}
       category="nouvelle recette"
       title="le burger végétarien"
+      alt="Le végétarien"
     >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim

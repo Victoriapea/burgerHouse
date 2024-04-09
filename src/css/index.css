@@ -7,6 +7,7 @@
 
 body {
   font-family: 'Roboto';
+  overflow-x: hidden;
   @apply text-secondary;
 }
 
