@@ -9,15 +9,15 @@ import Heading from "../../elements/DisplayTitles/Heading";
 
 const Slide = ({ children, category, title, image, alt }) => {
   return (
-    <div className="grid grid-cols-2 p-6">
-      <div className="p-10 mb-10">
+    <div className="grid md:grid-cols-2 p-3 md:p-6">
+      <div className="p-5 md:p-10 md:mb-10">
         <Heading variant="h4">{category}</Heading>
         <Heading theme="secondary" variant="h3" className="mb-5">
           {title}
         </Heading>
-        <p className="tracking-wide text-lg leading-relaxed font-light text-gray-800">{children}</p>
+        <p className="tracking-wide text-lg leading-relaxed font-light text-gray-800 mb-0 md:mb-10">{children}</p>
       </div>
-      <div className="relative w-full h-full">
+      <div className="relative w-full h-96 md:h-full">
         <img
           src={image}
           alt={alt}
@@ -67,7 +67,7 @@ export default function Event() {
 
   return (
     <Container>
-      <div className="shadow-2xl mb-20">
+      <div className="shadow-2xl mb-20 border border-gray-100">
         <AliceCarousel
           mouseTracking
           items={items}

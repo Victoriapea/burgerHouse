@@ -9,17 +9,17 @@ export default function Booking() {
   return (
     <Container>
       <div className='relative mb-20'>
-        <img src={Burger} alt="Un hamburger" className='absolute -top-20 -left-36 z-10' />
-        <img src={Sauce} alt="Une sauce pimentée" className='absolute bottom-0 left-0' />
-        <img src={Assiette} alt="Une assiette hamburger frites" className='absolute -bottom-52 -right-96' />
-        <div className='max-w-3xl mx-auto px-10 py-20'>
+        <img src={Burger} alt="Un hamburger" className='hidden md:block absolute -top-20 -left-36 z-10' />
+        <img src={Sauce} alt="Une sauce pimentée" className='hidden lg:block absolute bottom-0 left-0' />
+        <img src={Assiette} alt="Une assiette hamburger frites" className='hidden lg:block absolute -bottom-52 -right-96' />
+        <div className='max-w-3xl mx-auto sm:px-10 md:py-20'>
           <Heading variant="h3" alignement="center">
             Réversation
           </Heading>
-          <Heading alignement="center" theme="secondary" className="mt-5">
+          <Heading alignement="center" theme="secondary" className="mt-5 text-center">
             Réversez votre table
           </Heading>
-          <form className='grid grid-cols-2 gap-x-7 gap-y-6 mt-20'>
+          <form className='grid sm:grid-cols-2 gap-x-7 gap-y-6 mt-20'>
             <div>
               <label htmlFor="name">
                 Nom
@@ -79,7 +79,7 @@ export default function Booking() {
                 Nombre de personnes
               </label>
               <input
-                type="text"
+                type="number"
                 name="customer"
                 id="customer"
                 autoComplete="off"
